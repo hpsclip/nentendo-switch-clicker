@@ -1,0 +1,17 @@
+body { background: #1a1a1a; color: white; text-align: center; font-family: sans-serif; }
+
+#switch-console {
+    display: flex;
+    width: 300px; height: 120px;
+    margin: 20px auto;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.joycon { width: 50px; height: 100%; }
+.left { background: #00a1de; border-radius: 10px 0 0 10px; }
+.right { background: #ff3333; border-radius: 0 10px 10px 0; }
+.screen { background: #333; flex-grow: 1; display: flex; align-items: center; justify-content: center; font-weight: bold; }
+
+.shop { margin-top: 30px; }
