@@ -1,28 +1,35 @@
-let score = 0;
-let autoClickers = 0;
+// 1. Core Game Engine
+class GameEngine {
+    constructor() {
+        this.currency = 0;
+        this.clickValue = 1;
+        this.multiplier = 1;
+        this.init();
+    }
+    
+    init() {
+        console.log("Switch Clicker Initialized...");
+        // Add your main event listeners here
+    }
 
-function clickSwitch() {
-    score++;
-    updateDisplay();
-}
-
-function buyAutoClicker() {
-    if (score >= 10) {
-        score -= 10;
-        autoClickers++;
-        updateDisplay();
-    } else {
-        alert("Not enough games played!");
+    addCurrency(amount) {
+        this.currency += (amount * this.multiplier);
+        uiManager.updateDisplay(this.currency);
     }
 }
 
-function updateDisplay() {
-    document.getElementById('score').innerText = score;
-    document.getElementById('auto-count').innerText = autoClickers;
+// 2. UI Manager
+class UIManager {
+    updateDisplay(val) {
+        document.getElementById('score').innerText = Math.floor(val);
+    }
+    
+    // Create modular functions for every UI element
+    renderShopItems(items) {
+        // Logic to generate 50+ items dynamically
+    }
 }
 
-// This makes the game run automatically
-setInterval(() => {
-    score += autoClickers;
-    updateDisplay();
-}, 1000);
+// Initialize
+const game = new GameEngine();
+const uiManager = new UIManager();
