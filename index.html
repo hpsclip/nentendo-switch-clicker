@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nintendo Switch Clicker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Switch Clicker</h1>
+    <div id="score-board">Games Played: <span id="score">0</span></div>
+    
+    <!-- This is your "Switch" button -->
+    <button id="switch-console" onclick="clickSwitch()">
+        <div class="joycon left"></div>
+        <div class="screen">CLICK ME</div>
+        <div class="joycon right"></div>
+    </button>
+
+    <div class="shop">
+        <button onclick="buyAutoClicker()">Buy Auto-Clicker (Cost: 10)</button>
+        <p>Auto-Clickers: <span id="auto-count">0</span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
